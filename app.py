@@ -20,5 +20,5 @@ def predict():
     result = 'Spam' if prediction[0] == 1 else 'Not Spam'
     return render_template('Spam_Detection.html', result=result)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
