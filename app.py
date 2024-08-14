@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, jsonify
 import joblib
 import numpy as np
+import os
 
 # Load the model and TF-IDF vectorizer
 model = joblib.load('spam_detection_model.pkl')
